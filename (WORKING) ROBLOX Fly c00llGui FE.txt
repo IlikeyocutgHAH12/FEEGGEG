@@ -1,0 +1,37 @@
+local RobloxExploit = Instance.new("ScreenGui")
+local GUI = Instance.new("Frame")
+local Fly = Instance.new("TextButton")
+ 
+RobloxExploit.Name = "RobloxExploit"
+RobloxExploit.Parent = game.CoreGui
+
+GUI.Active = true
+GUI.Draggable = true
+
+GUI.Name = "GUI"
+GUI.Parent = RobloxExploit
+GUI.BackgroundColor3 = Color3.new(0, 0, 0)
+GUI.BorderColor3 = Color3.new(0, 1, 0)
+GUI.BorderSizePixel = 4
+GUI.Position = UDim2.new(0.335845888, 0, 0.152912617, 0)
+GUI.Size = UDim2.new(0, 522, 0, 352)
+
+Fly.Name = "Fly"
+Fly.Parent = GUI
+Fly.BackgroundColor3 = Color3.new(0, 0, 0)
+Fly.BorderColor3 = Color3.new(0, 1, 0)
+Fly.BorderSizePixel = 4
+Fly.Position = UDim2.new(0.308429122, 0, 0.428977281, 0)
+Fly.Size = UDim2.new(0, 200, 0, 50)
+Fly.Font = Enum.Font.SourceSans
+Fly.Text = "Fly"
+Fly.TextColor3 = Color3.new(1, 1, 1)
+Fly.TextScaled = true
+Fly.TextSize = 14
+Fly.TextWrapped = true
+Fly.MouseButton1Click:connect(function()
+	loadstring(game:GetObjects("rbxassetid://157645868")[1].Source)()
+	
+	print("Working")
+	
+end)

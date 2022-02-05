@@ -1,0 +1,454 @@
+--[[
+	
+	Credits:
+	
+    refrfgrtgef
+	Omega_Phoenix
+	Sharkringan
+	
+--]]
+
+for  _, a in pairs(game.CoreGui:children'') do if a.Name == "Sup Brah" then a:Destroy'' end end 
+
+--// Gui/Intro
+
+function alert(a)
+	game.StarterGui:SetCore("SendNotification", {
+		Title = "Alone GUI";
+		Text = a; 
+		Icon = "rbxassetid://1533191791"; 
+		Duration = 5;
+	})
+end
+
+alert("Welcome, "..game:service'Players'.LocalPlayer.Name)
+
+loadstring(game:HttpGet(('https://pastebin.com/raw/yaEYnTgv'),true))()
+
+--// Configuration
+
+plr = game:service'Players'.LocalPlayer
+char = plr.Character or plr.CharacterAdded:wait()
+coregui = game.CoreGui
+mouse = plr:GetMouse()
+
+infammo = false
+lowgrav = false
+btool = false
+clicktp = false
+esp = false
+fullbright = false
+noclip = false
+spam = false
+
+target = nil
+targetname = nil
+
+gui = coregui:WaitForChild'Sup Brah'
+frame = gui:WaitForChild'MainTitle'
+frame.Minimize:Destroy()
+frames = {}
+
+worlditems = workspace:WaitForChild'WorldItems'
+players = workspace:WaitForChild'Characters'
+
+page = 1
+next = frame:WaitForChild'Next_Button_Right'
+back = frame:WaitForChild'Next_Button_Left'
+next.Visible = false
+
+armormenu = frame:WaitForChild'ARMOR_MENU' --
+foodmenu = frame:WaitForChild'FOOD_MENU' --
+haxmenu = frame:WaitForChild'HAX_MENU' --
+miscmenu = frame:WaitForChild'MISC_MENU' --
+telemenu = frame:WaitForChild'TELE_MENU' --
+wepmenu = frame:WaitForChild'WEP_MENU' --
+thememenu = frame:WaitForChild'THEME_MENU' --
+
+table.insert(frames, armormenu)
+table.insert(frames, foodmenu)
+table.insert(frames, miscmenu)
+table.insert(frames, wepmenu)
+
+--// Main script don't touch if you don't know what you're doing.
+
+function short(string)
+    for i,v in pairs(game:service'Players':GetPlayers()) do
+        if v.Name:lower():sub(1, #string) == string:lower() then
+            target = v
+			targetname = v.Name
+        end
+    end    
+end 	
+
+function tp(v)
+	char:MoveTo(v)
+end
+
+function tp2(v1, v2, v3)
+	repeat wait() until char
+	char.HumanoidRootPart.CFrame = CFrame.new(v1,v2,v3)
+end
+
+function color(v, a)
+	if a == "Green" then
+		v.BackgroundColor3 = BrickColor.new('Forest green').Color
+	elseif a == "Red" then
+		v.BackgroundColor3 = BrickColor.new('Crimson').Color
+	end
+end
+
+function addesp(v)
+	if not workspace.Camera:FindFirstChild("ESP"..v.Name) then
+		local g1 = Instance.new("BillboardGui", workspace.Camera)
+		g1.Adornee = v:WaitForChild'Head'
+		g1.Name = "ESP"..v.Name
+		g1.AlwaysOnTop = true
+		g1.Size = UDim2.new(1, 0, 1, 0)
+		g1.StudsOffset = Vector3.new(-4, 2.5, 0)
+		local o1 = Instance.new("TextLabel", g1)
+		o1.BackgroundColor3 = Color3.new(0, 0, 0)
+		o1.BackgroundTransparency = 0.5
+		o1.BorderColor3 = Color3.new(0.105882, 0.164706, 0.207843)
+		o1.Size = UDim2.new(10, 0, 2, 0)
+		o1.Text = v.Name
+		o1.TextScaled = true
+		o1.TextWrapped = true
+		o1.TextColor3 = Color3.new(1, 0, 0)
+		o1.Font = Enum.Font.SourceSansBold
+		o1.FontSize = Enum.FontSize.Size14
+		for i = 0, 5 do
+			wait()
+			if v:FindFirstChild'HumanoidRootPart' and v ~= char then
+				local sg = Instance.new("SurfaceGui")
+				sg.Face = i
+				sg.AlwaysOnTop = true
+				sg.Parent = v
+				sg.Name = "ESP"..v.Name
+				sg.Adornee = v.HumanoidRootPart
+			 	local fr = Instance.new("Frame", sg)
+				fr.BackgroundColor3 = BrickColor.new('Really red').Color
+				fr.BorderSizePixel = 0
+				fr.BackgroundTransparency = .1
+				fr.Size = UDim2.new(1,0,1,0)
+			end
+		end
+	end
+end
+
+frame.Close.MouseButton1Down:Connect(function()
+	frame:TweenPosition(UDim2.new(0, 400, 0, 1000), "Out", "Quad", 1)
+	frame.Parent.Open.Visible = true
+end)
+
+frame.Parent.Open.MouseButton1Down:Connect(function()
+	frame.Parent.Open.Visible = false
+	frame:TweenPosition(UDim2.new(0.228, 0,0.191, 0), "In", "Quad", 1)
+end)
+
+telemenu.GunShop.MouseButton1Down:Connect(function()
+	tp2(-130, 7, 52)
+end)
+
+telemenu.PawnShop.MouseButton1Down:Connect(function()
+	tp2(29, 7, 54)
+end)
+
+telemenu.BarberShop.MouseButton1Down:Connect(function()
+	tp2(-145, 7, -49)
+end)
+
+telemenu.ClothesShop.MouseButton1Down:Connect(function()
+	tp(-104, 7, 93)
+end)
+
+telemenu.Bunker.MouseButton1Down:Connect(function()
+	tp2(1510, -67, -918)
+end)
+
+telemenu.Park.MouseButton1Down:Connect(function()
+	tp2(-407, 6, -104)
+end)
+
+telemenu.CrawlingZombie.MouseButton1Down:Connect(function()
+	tp(workspace.NPC_Monsters:FindFirstChild'Zombie_Crawling'.Head.Position + Vector3.new(5,0,5))
+end)
+
+telemenu.FastZombie.MouseButton1Down:Connect(function()
+	tp(workspace.NPC_Monsters:FindFirstChild'Zombie_Fast'.Head.Position + Vector3.new(5,0,5))
+end)
+
+telemenu.MediumZombie.MouseButton1Down:Connect(function()
+	tp(workspace.NPC_Monsters:FindFirstChild'Zombie_Medium'.Head.Position + Vector3.new(5,0,5))
+end)
+
+telemenu.SuperZombie.MouseButton1Down:Connect(function()
+	tp(workspace.NPC_Monsters:FindFirstChild'Zombie_Super'.Head.Position + Vector3.new(5,0,5))
+end)
+
+thememenu.BackgroundIdBtn.MouseButton1Down:Connect(function()
+	frame.ImageLabel.Image = 'rbxassetid://'..tonumber(thememenu.BackgroundIdLabel.Text)
+end)
+
+thememenu.SetBackgroundRBG.MouseButton1Down:Connect(function()
+	frame.ImageLabel.BackgroundColor3 = Color3.fromRGB(tonumber(thememenu.BackgroundR.Text),tonumber(thememenu.BackgroundG.Text),tonumber(thememenu.BackgroundB.Text))
+end)
+
+thememenu.SetTitleRBG.MouseButton1Down:Connect(function()
+	frame.BackgroundColor3 = Color3.fromRGB(tonumber(thememenu.BackgroundR.Text),tonumber(thememenu.BackgroundG.Text),tonumber(thememenu.BackgroundB.Text))
+end)
+
+for _, a in pairs(frames) do
+	for _, b in pairs(a:children'') do
+		if b:IsA'TextButton' then
+			b.MouseButton1Down:connect(function()
+				if b.BackgroundColor3 == BrickColor.new('Forest green').Color and worlditems:FindFirstChild(b.Name) then
+					local item = worlditems:FindFirstChild(b.Name)
+					if item:FindFirstChild'MainPart' then
+						tp(item.MainPart.Position)
+					else
+						tp(item.Position)
+					end
+				elseif not b.BackgroundColor3 == BrickColor.new('Forest green').Color then
+					alert("Error: Item has not spawned yet.")
+				end
+			end)
+		end
+	end
+end
+next.Visible = true
+back.Visible = false
+
+next.MouseButton1Down:connect(function()
+	if page == 1 then
+		page = page + 1
+		back.Visible = true
+		wepmenu.Visible = false
+		armormenu.Visible = true
+	elseif page == 2 then
+		page = page + 1
+		armormenu.Visible = false
+		foodmenu.Visible = true
+	elseif page == 3 then
+		page = page + 1
+		foodmenu.Visible = false
+		miscmenu.Visible = true
+	elseif page == 4 then
+		page = page + 1
+		miscmenu.Visible = false
+		telemenu.Visible = true
+	elseif page == 5 then
+		page = page + 1
+		telemenu.Visible = false
+		haxmenu.Visible = true
+	elseif page == 6 then
+		next.Visible = false
+		haxmenu.Visible = false
+		thememenu.Visible = true
+	end
+end)
+
+back.MouseButton1Down:connect(function()
+	if page == 1 then
+		back.Visible = false
+		wepmenu.Visible = true
+		armormenu.Visible = false
+	elseif page == 2 then
+		page = page - 1
+		armormenu.Visible = true
+		foodmenu.Visible = false
+	elseif page == 3 then
+		page = page - 1
+		foodmenu.Visible = true
+		miscmenu.Visible = false
+	elseif page == 4 then
+		page = page - 1
+		miscmenu.Visible = true
+		telemenu.Visible = false
+	elseif page == 5 then
+		page = page - 1
+		telemenu.Visible = true
+		haxmenu.Visible = false
+	elseif page == 6 then
+		page = page - 1
+		next.Visible = true
+		haxmenu.Visible = true
+		thememenu.Visible = false
+	end
+end)
+
+haxmenu:WaitForChild'TpToPlayerValue'.Changed:connect(function()
+	short(haxmenu:WaitForChild'TpToPlayerValue'.Text)
+end)
+
+haxmenu:WaitForChild'TpToPlayerButton'.MouseButton1Down:connect(function()
+	if players:FindFirstChild(targetname) then
+		ypcall(function() 
+			tp(players:FindFirstChild(targetname):WaitForChild'Head'.Position) 
+		end)
+	end
+end)
+
+haxmenu:WaitForChild'LowGravity'.MouseButton1Down:connect(function()
+	if lowgrav then
+		color(haxmenu:WaitForChild'LowGravity', "Red")
+		lowgrav = false
+		workspace.Gravity = 196.2
+	else
+		color(haxmenu:WaitForChild'LowGravity', "Green")
+		lowgrav = true
+		workspace.Gravity = 50
+	end
+end)
+
+haxmenu:waitForChild'ClickTp'.MouseButton1Down:connect(function()
+	if clicktp then
+		color(haxmenu:WaitForChild'ClickTp', "Red")
+		clicktp = false
+	else
+		color(haxmenu:WaitForChild'ClickTp', "Green")
+		clicktp = true
+	end
+end)
+
+haxmenu:waitForChild'InfAmmo'.MouseButton1Down:connect(function()
+	if infammo then
+		color(haxmenu:WaitForChild'InfAmmo', "Red")
+		infammo = false
+	else
+		color(haxmenu:WaitForChild'InfAmmo', "Green")
+		infammo = true
+	end
+end)
+
+haxmenu:waitForChild'Noclip'.MouseButton1Down:connect(function()
+	if noclip then
+		color(haxmenu:WaitForChild'Noclip', "Red")
+		noclip = false
+	else
+		color(haxmenu:WaitForChild'Noclip', "Green")
+		noclip = true
+	end
+end)
+
+haxmenu:waitForChild'Fullbright'.MouseButton1Down:connect(function()
+	if fullbright then
+		color(haxmenu:WaitForChild'Fullbright', "Red")
+		fullbright = false
+	else
+		color(haxmenu:WaitForChild'Fullbright', "Green")
+		fullbright = true
+	end
+end)
+
+haxmenu:waitForChild'Spam'.MouseButton1Down:connect(function()
+	if spam then
+		color(haxmenu:WaitForChild'Spam', "Red")
+		spam = false
+	else
+		color(haxmenu:WaitForChild'Spam', "Green")
+		spam = true
+	end
+end)
+
+haxmenu:waitForChild'Btool'.MouseButton1Down:connect(function()
+	if btool then
+		color(haxmenu:WaitForChild'Btool', "Red")
+		btool = false
+	else
+		color(haxmenu:WaitForChild'Btool', "Green")
+		btool = true
+	end
+end)
+
+haxmenu:waitForChild'Esp'.MouseButton1Down:connect(function()
+	if esp then
+		color(haxmenu:WaitForChild'Esp', "Red")
+		esp = false
+	else
+		color(haxmenu:WaitForChild'Esp', "Green")
+		esp = true
+	end
+end)
+
+
+mouse.Button1Down:connect(function()
+	if clicktp then char:MoveTo(mouse.Hit.p) end
+end)
+
+game:service'Lighting'.Changed:connect(function()
+	if fullbright then game:service'Lighting'.TimeOfDay = "14:00:00" end
+end)
+
+game:GetService("RunService").RenderStepped:connect(function()
+	char = plr.Character or plr.CharacterAdded:wait()
+	for _, b in pairs(frames) do
+		for _, a in pairs(b:children'') do
+			if a:IsA'TextButton' then
+				if worlditems:FindFirstChild(a.Name) then
+					a.BackgroundColor3 = BrickColor.new('Forest green').Color
+				else
+					a.BackgroundColor3 = BrickColor.new('Crimson').Color
+				end
+			end
+		end
+	end
+end)
+
+game:GetService("RunService").RenderStepped:connect(function()
+	if spam then game:service'ReplicatedStorage':WaitForChild'Remotes'.Chat:FireServer({["Message"] = haxmenu:WaitForChild'SpamChatValue'.Text}) end
+end)
+
+game:GetService("RunService").RenderStepped:connect(function()
+	if noclip then
+		char:WaitForChild'Humanoid':ChangeState(11)
+	end
+end)
+
+game:GetService("RunService").RenderStepped:connect(function()
+	if esp then
+		for _, a in pairs(players:children'') do
+			if a.Name ~= plr.Name and not workspace.Camera:FindFirstChild("ESP"..a.Name) then
+				addesp(a)
+			end
+		end
+	else
+		for _, a in pairs(workspace.Camera:children'') do
+			if a.Name:lower():find('esp') then
+				a:Destroy''
+			end
+		end
+		for _, a in pairs(players:GetDescendants'') do
+			if a.Name:lower():find('esp') then
+				a:Destroy''
+			end
+		end
+	end
+end)
+
+game:GetService("RunService").RenderStepped:connect(function()
+	if btool then
+		local box = Instance.new("SelectionBox", workspace.Camera)
+		local ev = mouse.Button1Down:connect(function()
+			if mouse.Target then
+				ypcall(function() mouse.Target:Destroy() end)
+			end
+		end)
+		while btool do
+            wait()
+			if mouse.Target and btool then
+				box.Adornee = mouse.Target
+			end
+		end
+        ev:Disconnect()
+	else
+        for _, a in pairs(workspace.Camera:children'') do
+        if a:IsA'SelectionBox' then a:Destroy'' end end
+	end
+end)
+
+while wait(.1) do
+	if infammo then
+		game:service'ReplicatedStorage':WaitForChild'Remotes'.Inventory:FireServer("Reload")
+	end
+end

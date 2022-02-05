@@ -1,0 +1,356 @@
+ocal ALONE_GUI = Instance.new("ScreenGui")
+local MainFrame = Instance.new("Frame")
+local Bar = Instance.new("Frame")
+local Exit = Instance.new("TextLabel")
+local Title = Instance.new("TextLabel")
+local PawnShop = Instance.new("TextButton")
+local Teleports = Instance.new("TextLabel")
+local Factory = Instance.new("TextButton")
+local GunShop = Instance.new("TextButton")
+local TactVestFarm = Instance.new("TextButton")
+local SpawnTP = Instance.new("TextButton")
+local Credits = Instance.new("TextLabel")
+local Credits_Frame = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local TextLabel_2 = Instance.new("TextLabel")
+local TextLabel_3 = Instance.new("TextLabel")
+local RandomTP = Instance.new("TextButton")
+local Misc = Instance.new("TextLabel")
+local InfAmmo = Instance.new("TextButton")
+local Information = Instance.new("TextLabel")
+local Information_2 = Instance.new("TextLabel")
+local ChatSpam = Instance.new("TextButton")
+local Information_3 = Instance.new("TextLabel")
+local OpenClose = Instance.new("TextButton")
+
+-- Properties
+
+ALONE_GUI.Name = "ALONE_GUI"
+ALONE_GUI.Parent = game.CoreGui
+
+MainFrame.Name = "MainFrame"
+MainFrame.Parent = ALONE_GUI
+MainFrame.Draggable = true
+MainFrame.BackgroundColor3 = Color3.new(0.333333, 0.666667, 1)
+MainFrame.BorderColor3 = Color3.new(1, 1, 1)
+MainFrame.BorderSizePixel = 0
+MainFrame.Position = UDim2.new(0.210387349, 0, 0.313479602, 0)
+MainFrame.Size = UDim2.new(0, 308, 0, 355)
+
+Bar.Name = "Bar"
+Bar.Parent = MainFrame
+Bar.BackgroundColor3 = Color3.new(0, 0.45098, 0.678431)
+Bar.BorderColor3 = Color3.new(1, 1, 1)
+Bar.BorderSizePixel = 0
+Bar.Position = UDim2.new(0, 0, -0.0732394382, 0)
+Bar.Size = UDim2.new(0, 308, 0, 26)
+
+Exit.Name = "Exit"
+Exit.Parent = Bar
+Exit.BackgroundColor3 = Color3.new(0, 0.415686, 0.623529)
+Exit.BorderSizePixel = 0
+Exit.Position = UDim2.new(0.909090936, 0, 0, 0)
+Exit.Size = UDim2.new(0, 28, 0, 25)
+Exit.Font = Enum.Font.Highway
+Exit.Text = "X"
+Exit.TextScaled = true
+Exit.TextSize = 14
+Exit.TextWrapped = true
+
+Title.Name = "Title"
+Title.Parent = Bar
+Title.BackgroundColor3 = Color3.new(0, 0.415686, 0.623529)
+Title.BorderSizePixel = 0
+Title.Size = UDim2.new(0, 150, 0, 25)
+Title.Font = Enum.Font.Highway
+Title.Text = "ALONE GUI"
+Title.TextColor3 = Color3.new(1, 1, 1)
+Title.TextScaled = true
+Title.TextSize = 14
+Title.TextWrapped = true
+
+PawnShop.Name = "PawnShop"
+PawnShop.Parent = MainFrame
+PawnShop.BackgroundColor3 = Color3.new(1, 1, 1)
+PawnShop.Position = UDim2.new(0.019480519, 0, 0.104225352, 0)
+PawnShop.Size = UDim2.new(0, 121, 0, 30)
+PawnShop.Style = Enum.ButtonStyle.RobloxRoundDefaultButton
+PawnShop.Font = Enum.Font.Highway
+PawnShop.Text = "Pawn Shop"
+PawnShop.TextSize = 20
+PawnShop.TextWrapped = true
+
+Teleports.Name = "Teleports"
+Teleports.Parent = MainFrame
+Teleports.BackgroundColor3 = Color3.new(0, 0.435294, 0.654902)
+Teleports.BorderSizePixel = 0
+Teleports.Position = UDim2.new(0.019480519, 0, 0.0197183099, 0)
+Teleports.Size = UDim2.new(0, 121, 0, 23)
+Teleports.Font = Enum.Font.Highway
+Teleports.Text = "TELEPORTS"
+Teleports.TextColor3 = Color3.new(1, 1, 1)
+Teleports.TextSize = 20
+Teleports.TextWrapped = true
+
+Factory.Name = "Factory"
+Factory.Parent = MainFrame
+Factory.BackgroundColor3 = Color3.new(1, 1, 1)
+Factory.Position = UDim2.new(0.019480519, 0, 0.188732386, 0)
+Factory.Size = UDim2.new(0, 121, 0, 30)
+Factory.Style = Enum.ButtonStyle.RobloxRoundDefaultButton
+Factory.Font = Enum.Font.Highway
+Factory.Text = "Factory"
+Factory.TextSize = 20
+Factory.TextWrapped = true
+
+GunShop.Name = "GunShop"
+GunShop.Parent = MainFrame
+GunShop.BackgroundColor3 = Color3.new(1, 1, 1)
+GunShop.Position = UDim2.new(0.019480519, 0, 0.273239434, 0)
+GunShop.Size = UDim2.new(0, 121, 0, 30)
+GunShop.Style = Enum.ButtonStyle.RobloxRoundDefaultButton
+GunShop.Font = Enum.Font.Highway
+GunShop.Text = "Gun Shop"
+GunShop.TextSize = 20
+GunShop.TextWrapped = true
+
+TactVestFarm.Name = "TactVestFarm"
+TactVestFarm.Parent = MainFrame
+TactVestFarm.BackgroundColor3 = Color3.new(1, 1, 1)
+TactVestFarm.Position = UDim2.new(0.019480519, 0, 0.357746482, 0)
+TactVestFarm.Size = UDim2.new(0, 121, 0, 30)
+TactVestFarm.Style = Enum.ButtonStyle.RobloxRoundDefaultButton
+TactVestFarm.Font = Enum.Font.Highway
+TactVestFarm.Text = "Tact Vest"
+TactVestFarm.TextSize = 20
+TactVestFarm.TextWrapped = true
+
+SpawnTP.Name = "SpawnTP"
+SpawnTP.Parent = MainFrame
+SpawnTP.BackgroundColor3 = Color3.new(1, 1, 1)
+SpawnTP.Position = UDim2.new(0.019480519, 0, 0.44225353, 0)
+SpawnTP.Size = UDim2.new(0, 121, 0, 30)
+SpawnTP.Style = Enum.ButtonStyle.RobloxRoundDefaultButton
+SpawnTP.Font = Enum.Font.Highway
+SpawnTP.Text = "Spawn TP"
+SpawnTP.TextSize = 20
+SpawnTP.TextWrapped = true
+
+Credits.Name = "Credits"
+Credits.Parent = MainFrame
+Credits.BackgroundColor3 = Color3.new(0, 0.435294, 0.654902)
+Credits.BorderSizePixel = 0
+Credits.Position = UDim2.new(0.587662339, 0, 0.0197183099, 0)
+Credits.Size = UDim2.new(0, 121, 0, 23)
+Credits.Font = Enum.Font.Highway
+Credits.Text = "CREDITS"
+Credits.TextColor3 = Color3.new(1, 1, 1)
+Credits.TextSize = 20
+Credits.TextWrapped = true
+
+Credits_Frame.Name = "Credits_Frame"
+Credits_Frame.Parent = MainFrame
+Credits_Frame.BackgroundColor3 = Color3.new(0, 0.443137, 0.666667)
+Credits_Frame.BorderSizePixel = 0
+Credits_Frame.Position = UDim2.new(0.587662339, 0, 0.104225352, 0)
+Credits_Frame.Size = UDim2.new(0, 121, 0, 198)
+
+TextLabel.Parent = Credits_Frame
+TextLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel.BackgroundTransparency = 1
+TextLabel.BorderSizePixel = 0
+TextLabel.Size = UDim2.new(0, 121, 0, 30)
+TextLabel.Font = Enum.Font.Highway
+TextLabel.Text = "UI By: Raezai"
+TextLabel.TextColor3 = Color3.new(1, 1, 1)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14
+TextLabel.TextWrapped = true
+
+TextLabel_2.Parent = Credits_Frame
+TextLabel_2.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel_2.BackgroundTransparency = 1
+TextLabel_2.BorderSizePixel = 0
+TextLabel_2.Position = UDim2.new(0, 0, 0.151515156, 0)
+TextLabel_2.Size = UDim2.new(0, 121, 0, 30)
+TextLabel_2.Font = Enum.Font.Highway
+TextLabel_2.Text = "Scripts from V3rm"
+TextLabel_2.TextColor3 = Color3.new(1, 1, 1)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 14
+TextLabel_2.TextWrapped = true
+
+TextLabel_3.Parent = Credits_Frame
+TextLabel_3.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel_3.BackgroundTransparency = 1
+TextLabel_3.BorderSizePixel = 0
+TextLabel_3.Position = UDim2.new(0, 0, 0.303030312, 0)
+TextLabel_3.Size = UDim2.new(0, 121, 0, 30)
+TextLabel_3.Font = Enum.Font.Highway
+TextLabel_3.Text = "Discord: https://discord.gg/bJtMUkG"
+TextLabel_3.TextColor3 = Color3.new(1, 1, 1)
+TextLabel_3.TextScaled = true
+TextLabel_3.TextSize = 14
+TextLabel_3.TextWrapped = true
+
+RandomTP.Name = "RandomTP"
+RandomTP.Parent = MainFrame
+RandomTP.BackgroundColor3 = Color3.new(1, 1, 1)
+RandomTP.Position = UDim2.new(0.019480519, 0, 0.895774662, 0)
+RandomTP.Size = UDim2.new(0, 121, 0, 30)
+RandomTP.Style = Enum.ButtonStyle.RobloxRoundDefaultButton
+RandomTP.Font = Enum.Font.Highway
+RandomTP.Text = "TP TO RANDOM ITEMS"
+RandomTP.TextSize = 10
+RandomTP.TextWrapped = true
+
+Misc.Name = "Misc"
+Misc.Parent = MainFrame
+Misc.BackgroundColor3 = Color3.new(0, 0.435294, 0.654902)
+Misc.BorderSizePixel = 0
+Misc.Position = UDim2.new(0.019480519, 0, 0.597183108, 0)
+Misc.Size = UDim2.new(0, 169, 0, 23)
+Misc.Font = Enum.Font.Highway
+Misc.Text = "MISC"
+Misc.TextColor3 = Color3.new(1, 1, 1)
+Misc.TextSize = 20
+Misc.TextWrapped = true
+
+InfAmmo.Name = "InfAmmo"
+InfAmmo.Parent = MainFrame
+InfAmmo.BackgroundColor3 = Color3.new(1, 1, 1)
+InfAmmo.Position = UDim2.new(0.019480519, 0, 0.794366241, 0)
+InfAmmo.Size = UDim2.new(0, 121, 0, 30)
+InfAmmo.Style = Enum.ButtonStyle.RobloxRoundDefaultButton
+InfAmmo.Font = Enum.Font.Highway
+InfAmmo.Text = "Inf Ammo"
+InfAmmo.TextSize = 20
+InfAmmo.TextWrapped = true
+
+Information.Name = "Information"
+Information.Parent = MainFrame
+Information.BackgroundColor3 = Color3.new(0, 0.435294, 0.654902)
+Information.BorderSizePixel = 0
+Information.Position = UDim2.new(0.431818187, 0, 0.804225326, 0)
+Information.Size = UDim2.new(0, 175, 0, 23)
+Information.Font = Enum.Font.Highway
+Information.Text = "Will give you inf ammo."
+Information.TextColor3 = Color3.new(1, 1, 1)
+Information.TextScaled = true
+Information.TextSize = 20
+Information.TextWrapped = true
+
+Information_2.Name = "Information"
+Information_2.Parent = MainFrame
+Information_2.BackgroundColor3 = Color3.new(0, 0.435294, 0.654902)
+Information_2.BorderSizePixel = 0
+Information_2.Position = UDim2.new(0.431818187, 0, 0.904225349, 0)
+Information_2.Size = UDim2.new(0, 175, 0, 23)
+Information_2.Font = Enum.Font.Highway
+Information_2.Text = "Will enable a keybind to teleport to random items. [E]"
+Information_2.TextColor3 = Color3.new(1, 1, 1)
+Information_2.TextScaled = true
+Information_2.TextSize = 20
+Information_2.TextWrapped = true
+
+ChatSpam.Name = "ChatSpam"
+ChatSpam.Parent = MainFrame
+ChatSpam.BackgroundColor3 = Color3.new(1, 1, 1)
+ChatSpam.Position = UDim2.new(0.019480519, 0, 0.690140843, 0)
+ChatSpam.Size = UDim2.new(0, 121, 0, 30)
+ChatSpam.Style = Enum.ButtonStyle.RobloxRoundDefaultButton
+ChatSpam.Font = Enum.Font.Highway
+ChatSpam.Text = "Chat Spam"
+ChatSpam.TextSize = 20
+ChatSpam.TextWrapped = true
+
+Information_3.Name = "Information"
+Information_3.Parent = MainFrame
+Information_3.BackgroundColor3 = Color3.new(0, 0.435294, 0.654902)
+Information_3.BorderSizePixel = 0
+Information_3.Position = UDim2.new(0.431818187, 0, 0.699999988, 0)
+Information_3.Size = UDim2.new(0, 175, 0, 23)
+Information_3.Font = Enum.Font.Highway
+Information_3.Text = "Spams the chat (lol)"
+Information_3.TextColor3 = Color3.new(1, 1, 1)
+Information_3.TextScaled = true
+Information_3.TextSize = 20
+Information_3.TextWrapped = true
+
+OpenClose.Name = "Open/Close"
+OpenClose.Parent = ALONE_GUI
+OpenClose.BackgroundColor3 = Color3.new(0, 0.666667, 1)
+OpenClose.BorderColor3 = Color3.new(0, 0.427451, 0.639216)
+OpenClose.BorderSizePixel = 5
+OpenClose.Position = UDim2.new(0, 0, 0.537617564, 0)
+OpenClose.Size = UDim2.new(0, 195, 0, 44)
+OpenClose.Font = Enum.Font.Highway
+OpenClose.Text = "Open/Close"
+OpenClose.TextColor3 = Color3.new(1, 1, 1)
+OpenClose.TextSize = 30
+OpenClose.TextWrapped = true
+
+-- functions lol
+
+PawnShop.MouseButton1Click:connect(function()
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(31.7124729, 5.39661455, 50.5575943))
+end)
+GunShop.MouseButton1Click:connect(function()
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-114.510422, 6.13872433, 55.7958412))
+end)
+TactVestFarm.MouseButton1Click:connect(function()
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(445.367828, 5.02908754, -1412.38513))
+end)
+Factory.MouseButton1Click:connect(function()
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-515.606689, 3.73840618, -973.149658))
+end)
+SpawnTP.MouseButton1Click:connect(function()
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-32.6829491, 5.59872007, -7.1303215))
+end)
+
+-- misc functions
+
+ChatSpam.MouseButton1Click:connect(function()
+for y=1,100 do
+wait(.2)
+game.ReplicatedStorage.Remotes.Chat:FireServer({["Message"] = "hueeeeeeeeeeeeeeeeeeeeeeeee", ["Player"] = game.Players.Creamiies,["Character"] = game.Workspace.Characters.Creamiies})
+end
+end)
+
+InfAmmo.MouseButton1Click:connect(function()
+while true do
+game["Run Service"].RenderStepped:wait()
+wait(0.45)
+game.ReplicatedStorage.Remotes.Inventory:FireServer("Reload")
+end
+end)
+
+RandomTP.MouseButton1Click:connect(function()
+plr = game.Players.LocalPlayer
+hum = plr.Character.HumanoidRootPart
+mouse = game.Players.LocalPlayer:GetMouse()
+
+mouse.KeyDown:connect(function(key)
+if key == "e" then
+if mouse.Target then
+for i,v in pairs(workspace.WorldItems:GetChildren())do
+if v.Name == "BulletVest2" or v.Name == "BulletVest1" or v.Name == "BulletVest3" or v.Name == "BulletVest4" or v.Name == "Medkit" or v.Name == "MRE" or v.Name == "Hammer" or v.Name == "SteelPipe" or v.Name == "PoliceBaton" then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(v.MainPart.Position)
+end
+end
+end
+end
+end)
+end)
+
+-- open & close functions
+
+local open = false
+
+OpenClose.MouseButton1Click:connect(function()
+if MainFrame.Visible == false then
+ MainFrame.Visible = true
+else
+ MainFrame.Visible = false
+end
+end)

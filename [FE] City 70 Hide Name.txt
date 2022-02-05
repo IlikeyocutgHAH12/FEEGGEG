@@ -1,0 +1,8 @@
+                                                                                         --[[
+   ___   _   _                      _   ____ 
+  / __| (_) | |_   _  _     ___    / | |__  |
+ | (__  | | |  _| | || |   |___|   | |   / / 
+  \___| |_|  \__|  \_, |           |_|  /_/  
+                   |__/                      
+FE No Name - Working As Of 5/18/2018
+By A Sad Cat#8430                                                                                              ]]game.Players.LocalPlayer.Character.Head.Rank.Background:ClearAllChildren()

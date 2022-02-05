@@ -1,0 +1,612 @@
+-- Objects
+
+local FeHax1337 = Instance.new("ScreenGui")
+local Base = Instance.new("Frame")
+local Annoy = Instance.new("TextButton")
+local Hatspin = Instance.new("TextButton")
+local Creeper = Instance.new("TextButton")
+local Username = Instance.new("TextBox")
+local Naked = Instance.new("TextButton")
+local Rape = Instance.new("TextButton")
+local DropHats = Instance.new("TextButton")
+local GameRuiner = Instance.new("TextButton")
+local Fly = Instance.new("TextButton")
+local Noclip = Instance.new("TextButton")
+local GUILine = Instance.new("Frame")
+local no = Instance.new("Frame")
+local FE = Instance.new("TextLabel")
+local GUILine_2 = Instance.new("Frame")
+local no_2 = Instance.new("Frame")
+local Creditz = Instance.new("TextLabel")
+
+-- Properties
+
+FeHax1337.Name = "FeHax1337"
+FeHax1337.Parent = game.CoreGui
+
+Base.Name = "Base"
+Base.Parent = FeHax1337
+Base.Active = true
+Base.BackgroundColor3 = Color3.new(1, 1, 1)
+Base.BorderSizePixel = 0
+Base.Draggable = true
+Base.Position = UDim2.new(0.314787179, 0, 0.224938855, 0)
+Base.Selectable = true
+Base.Size = UDim2.new(0, 496, 0, 449)
+
+Annoy.Name = "Annoy"
+Annoy.Parent = Base
+Annoy.BackgroundColor3 = Color3.new(0.0588235, 0.513726, 0.164706)
+Annoy.BorderSizePixel = 0
+Annoy.Position = UDim2.new(0.362454742, 0, 0.374793768, 0)
+Annoy.Size = UDim2.new(0, 144, 0, 50)
+Annoy.Font = Enum.Font.Highway
+Annoy.Text = "Annoy"
+Annoy.TextColor3 = Color3.new(0, 0, 0)
+Annoy.TextSize = 25
+Annoy.MouseButton1Down:connect(function()
+local Victim = Username.Text
+local P=game:GetService'Players'.LocalPlayer
+local C=P.Character or P.CharacterAdded:Wait()
+game:GetService'RunService'.Stepped:Connect(function()
+    C:WaitForChild'HumanoidRootPart'.CFrame=CFrame.new(game:GetService'Players':FindFirstChild(Victim).Character:WaitForChild'HumanoidRootPart'.Position)
+end)
+end)
+
+Hatspin.Name = "Hatspin"
+Hatspin.Parent = Base
+Hatspin.BackgroundColor3 = Color3.new(0.0588235, 0.513726, 0.164706)
+Hatspin.BorderSizePixel = 0
+Hatspin.Position = UDim2.new(0.0277176313, 0, 0.374793768, 0)
+Hatspin.Size = UDim2.new(0, 144, 0, 50)
+Hatspin.Font = Enum.Font.Highway
+Hatspin.Text = "Hatspin"
+Hatspin.TextColor3 = Color3.new(0, 0, 0)
+Hatspin.TextSize = 25
+Hatspin.MouseButton1Down:connect(function()
+	local obese = game:GetService('Players')
+for i,v in pairs(obese.LocalPlayer.Character:GetChildren()) do
+if v.ClassName == "Accessory" then
+local stg = v.Handle:FindFirstChildOfClass("BodyForce")
+if stg == nil then
+local a = Instance.new("BodyPosition")
+local b = Instance.new("BodyAngularVelocity")
+a.Parent = v.Handle
+b.Parent = v.Handle
+v.Handle.AccessoryWeld:Destroy()
+b.AngularVelocity = Vector3.new(0,100,0)
+b.MaxTorque = Vector3.new(0,200,0)
+a.P = 30000
+a.D = 50
+game:GetService('RunService').Stepped:connect(function()
+a.Position = obese.LocalPlayer.Character.Head.Position
+end)
+end
+end
+end
+end)
+
+Creeper.Name = "Creeper"
+Creeper.Parent = Base
+Creeper.BackgroundColor3 = Color3.new(0.0588235, 0.513726, 0.164706)
+Creeper.BorderSizePixel = 0
+Creeper.Position = UDim2.new(0.691692233, 0, 0.374793768, 0)
+Creeper.Size = UDim2.new(0, 144, 0, 50)
+Creeper.Font = Enum.Font.Highway
+Creeper.Text = "Creeper"
+Creeper.TextColor3 = Color3.new(0, 0, 0)
+Creeper.TextSize = 25
+Creeper.MouseButton1Down:connect(function()
+local plr = game.Players.LocalPlayer.Character.Humanoid
+if plr.RigType == R15 then
+game.Players.LocalPlayer.Character.Head.Mesh:Destroy()
+game.Players.LocalPlayer.Character.LeftHand:Destroy()
+game.Players.LocalPlayer.Character.LeftLowerArm:Destroy()
+game.Players.LocalPlayer.Character.LeftUpperArm:Destroy()
+game.Players.LocalPlayer.Character.RightHand:Destroy()
+game.Players.LocalPlayer.Character.RightLowerArm:Destroy()
+game.Players.LocalPlayer.Character.RightUpperArm:Destroy()
+else
+game.Players.LocalPlayer.Character.Head.Mesh:Destroy()
+game.Players.LocalPlayer.Character["Left Arm"]:Destroy()
+game.Players.LocalPlayer.Character["Right Arm"]:Destroy()
+end
+end)
+
+
+Username.Name = "Username"
+Username.Parent = Base
+Username.BackgroundColor3 = Color3.new(0.721569, 0.721569, 0.721569)
+Username.BackgroundTransparency = 0.25
+Username.BorderSizePixel = 0
+Username.Position = UDim2.new(0.0927419364, 0, 0.209354118, 0)
+Username.Size = UDim2.new(0, 403, 0, 50)
+Username.Font = Enum.Font.Highway
+Username.Text = "Username"
+Username.TextColor3 = Color3.new(0, 0, 0)
+Username.TextSize = 28
+Username.TextWrapped = true
+
+Naked.Name = "Naked"
+Naked.Parent = Base
+Naked.BackgroundColor3 = Color3.new(0.0588235, 0.513726, 0.164706)
+Naked.BorderSizePixel = 0
+Naked.Position = UDim2.new(0.0277176313, 0, 0.557128489, 0)
+Naked.Size = UDim2.new(0, 144, 0, 50)
+Naked.Font = Enum.Font.Highway
+Naked.Text = "Naked"
+Naked.TextColor3 = Color3.new(0, 0, 0)
+Naked.TextSize = 25
+Naked.MouseButton1Down:connect(function()
+	hummy = game:GetService("Players").LocalPlayer.Character.Humanoid
+pcall(function()
+    hummy.Parent.Pants:Destroy()
+end)
+pcall(function()
+    hummy.Parent.Shirt:Destroy()
+end)
+end)
+
+
+Rape.Name = "Rape"
+Rape.Parent = Base
+Rape.BackgroundColor3 = Color3.new(0.0588235, 0.513726, 0.164706)
+Rape.BorderSizePixel = 0
+Rape.Position = UDim2.new(0.362419903, 0, 0.557128489, 0)
+Rape.Size = UDim2.new(0, 144, 0, 50)
+Rape.Font = Enum.Font.Highway
+Rape.Text = "Rape"
+Rape.TextColor3 = Color3.new(0, 0, 0)
+Rape.TextSize = 25
+Rape.MouseButton1Down:connect(function()
+	
+player = Username.Text
+stupid = Instance.new('Animation')
+stupid.AnimationId = 'rbxassetid://148840371'
+hummy = game:GetService("Players").LocalPlayer.Character.Humanoid
+pcall(function()
+    hummy.Parent.Pants:Destroy()
+end)
+pcall(function()
+    hummy.Parent.Shirt:Destroy()
+end)
+notfunny = hummy:LoadAnimation(stupid)
+notfunny:Play()
+notfunny:AdjustSpeed(10)
+while hummy.Parent.Parent ~= nil do
+wait()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[Username.Text].Character.HumanoidRootPart.CFrame
+end
+end)
+
+DropHats.Name = "Drop Hats"
+DropHats.Parent = Base
+DropHats.BackgroundColor3 = Color3.new(0.0588235, 0.513726, 0.164706)
+DropHats.BorderSizePixel = 0
+DropHats.Position = UDim2.new(0.690962017, 0, 0.557128489, 0)
+DropHats.Size = UDim2.new(0, 144, 0, 50)
+DropHats.Font = Enum.Font.Highway
+DropHats.Text = "Drop Hats"
+DropHats.TextColor3 = Color3.new(0, 0, 0)
+DropHats.TextSize = 25
+DropHats.MouseButton1Down:connect(function()	
+for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+if (v:IsA("Accessory")) then
+v.Parent = workspace
+end
+end
+end)
+
+GameRuiner.Name = "GameRuiner"
+GameRuiner.Parent = Base
+GameRuiner.BackgroundColor3 = Color3.new(0.0588235, 0.513726, 0.164706)
+GameRuiner.BorderSizePixel = 0
+GameRuiner.Position = UDim2.new(0.0277424753, 0, 0.724166334, 0)
+GameRuiner.Size = UDim2.new(0, 144, 0, 50)
+GameRuiner.Font = Enum.Font.Highway
+GameRuiner.Text = "GameRuiner"
+GameRuiner.TextColor3 = Color3.new(0, 0, 0)
+GameRuiner.TextSize = 25
+GameRuiner.MouseButton1Down:connect(function()
+	-- Objects
+
+local GameRuiner = Instance.new("ScreenGui")
+local Main = Instance.new("Frame")
+local info = Instance.new("TextLabel")
+local close = Instance.new("TextButton")
+local username = Instance.new("TextBox")
+local shutdown = Instance.new("TextButton")
+local give = Instance.new("TextButton")
+local goto = Instance.new("TextButton")
+
+-- Properties
+
+GameRuiner.Name = "GameRuiner"
+GameRuiner.Parent = game.Players.LocalPlayer.PlayerGui
+
+Main.Name = "Main"
+Main.Parent = GameRuiner
+Main.Active = true
+Main.Selectable = true
+Main.BackgroundColor3 = Color3.new(0.0980392, 0.0980392, 0.0980392)
+Main.BorderColor3 = Color3.new(1, 1, 1)
+Main.Draggable = true
+Main.Position = UDim2.new(0.400000006, 0, 0.400000006, 0)
+Main.Size = UDim2.new(0, 400, 0, 300)
+
+info.Name = "info"
+info.Parent = Main
+info.BackgroundColor3 = Color3.new(0.4, 0.4, 0.4)
+info.BorderColor3 = Color3.new(1, 1, 1)
+info.Size = UDim2.new(0, 350, 0, 50)
+info.Font = Enum.Font.SourceSansLight
+info.FontSize = Enum.FontSize.Size32
+info.Text = "GameRuiner GUI V2.0"
+info.TextColor3 = Color3.new(0, 0, 0)
+info.TextSize = 30
+info.TextWrapped = true
+
+close.Name = "close"
+close.Parent = Main
+close.BackgroundColor3 = Color3.new(1, 0, 0)
+close.BorderColor3 = Color3.new(1, 1, 1)
+close.Position = UDim2.new(0, 350, 0, 0)
+close.Size = UDim2.new(0, 50, 0, 50)
+close.Font = Enum.Font.SourceSansLight
+close.FontSize = Enum.FontSize.Size14
+close.Text = "X"
+close.TextColor3 = Color3.new(0, 0, 0)
+close.TextScaled = true
+close.TextSize = 14
+close.TextWrapped = true
+
+username.Name = "username"
+username.Parent = Main
+username.BackgroundColor3 = Color3.new(0.901961, 0.901961, 0.901961)
+username.BorderColor3 = Color3.new(0, 0, 0)
+username.Position = UDim2.new(0, 50, 0, 100)
+username.Size = UDim2.new(0, 300, 0, 50)
+username.Font = Enum.Font.SourceSansLight
+username.FontSize = Enum.FontSize.Size14
+username.Text = "Username"
+username.TextColor3 = Color3.new(0, 0, 0)
+username.TextScaled = true
+username.TextSize = 14
+username.TextWrapped = true
+
+shutdown.Name = "shutdown"
+shutdown.Parent = Main
+shutdown.BackgroundColor3 = Color3.new(1, 0, 1)
+shutdown.BorderColor3 = Color3.new(1, 1, 1)
+shutdown.ClipsDescendants = true
+shutdown.Position = UDim2.new(0, 50, 0, 250)
+shutdown.Size = UDim2.new(0, 300, 0, 50)
+shutdown.AutoButtonColor = false
+shutdown.Font = Enum.Font.SourceSansLight
+shutdown.FontSize = Enum.FontSize.Size14
+shutdown.Text = "FE Shutdown"
+shutdown.TextColor3 = Color3.new(0, 0, 0)
+shutdown.TextScaled = true
+shutdown.TextSize = 14
+shutdown.TextWrapped = true
+
+give.Name = "give"
+give.Parent = Main
+give.BackgroundColor3 = Color3.new(0, 0.501961, 0)
+give.BorderColor3 = Color3.new(1, 1, 1)
+give.ClipsDescendants = true
+give.Position = UDim2.new(0, 50, 0, 175)
+give.Size = UDim2.new(0, 125, 0, 50)
+give.AutoButtonColor = false
+give.Font = Enum.Font.SourceSansLight
+give.FontSize = Enum.FontSize.Size14
+give.Text = "Give"
+give.TextColor3 = Color3.new(0, 0, 0)
+give.TextScaled = true
+give.TextSize = 14
+give.TextWrapped = true
+
+goto.Name = "goto"
+goto.Parent = Main
+goto.BackgroundColor3 = Color3.new(0, 0.501961, 0)
+goto.BorderColor3 = Color3.new(1, 1, 1)
+goto.ClipsDescendants = true
+goto.Position = UDim2.new(0, 225, 0, 175)
+goto.Size = UDim2.new(0, 125, 0, 50)
+goto.AutoButtonColor = false
+goto.Font = Enum.Font.SourceSansLight
+goto.FontSize = Enum.FontSize.Size14
+goto.Text = "Goto"
+goto.TextColor3 = Color3.new(0, 0, 0)
+goto.TextScaled = true
+goto.TextSize = 14
+goto.TextWrapped = true
+
+function GetPlayers(Name)
+	if Name:lower() == "me" then
+		return {game.Players.LocalPlayer}
+	elseif Name:lower() == "all" then
+		return game.Players:GetChildren()
+	elseif Name:lower() == "others" then
+		local t = {}
+		for i,v in pairs(game.Players:GetChildren()) do
+			if v.Name ~= game.Players.LocalPlayer.Name then
+				table.insert(t, v)
+			end
+		end
+		return t
+	else
+		local t = {}
+		for i,v in pairs(game.Players:GetChildren()) do
+			if v.Name:sub(1, #Name):lower() == Name:lower() then
+				table.insert(t, v)
+			end
+		end
+		return t
+	end
+end
+
+close.MouseButton1Down:connect(function()
+	Main:TweenPosition(UDim2.new(0.400000006, 0, -0.5, 0), "Out", "Quad", 0.5)
+	wait(0.5)
+	Main:Destroy()
+end)
+
+give.MouseButton1Down:connect(function(X, Y)
+	if not give:FindFirstChild('Circle') then
+		local C = Instance.new('ImageLabel', give)
+		C.BackgroundTransparency = 1
+		C.Position = UDim2.new(0, X - 0, 0, Y - 35) - UDim2.new(0, give.AbsolutePosition.X, 0, give.AbsolutePosition.Y)
+		C.Size = UDim2.new(0, 0, 0, 0)
+		C.ZIndex = give.ZIndex
+		C.Image = 'rbxassetid://200182847'
+		C.ImageColor3 = Color3.new(0.0980392, 0.0980392, 0.0980392)
+		C.Name = 'Circle'
+		C:TweenSizeAndPosition(UDim2.new(0, 500, 0, 500), C.Position - UDim2.new(0, 250, 0, 250), 'Out', 'Quart', 2.5)
+		for i = 0, 1, 0.03 do
+			C.ImageTransparency = i
+			game:GetService('RunService').RenderStepped:wait()
+		end
+		C:destroy()
+	end
+	for a,v in pairs(GetPlayers(username.Text)) do
+		for b,x in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+			if x:IsA("Tool") then
+				x.Parent = v.Character
+			end
+		end
+	end
+end)
+
+shutdown.MouseButton1Down:connect(function(X, Y)
+	if not shutdown:FindFirstChild('Circle') then
+		local C = Instance.new('ImageLabel', shutdown)
+		C.BackgroundTransparency = 1
+		C.Position = UDim2.new(0, X - 0, 0, Y - 35) - UDim2.new(0, shutdown.AbsolutePosition.X, 0, shutdown.AbsolutePosition.Y)
+		C.Size = UDim2.new(0, 0, 0, 0)
+		C.ZIndex = shutdown.ZIndex
+		C.Image = 'rbxassetid://200182847'
+		C.ImageColor3 = Color3.new(0.0980392, 0.0980392, 0.0980392)
+		C.Name = 'Circle'
+		C:TweenSizeAndPosition(UDim2.new(0, 500, 0, 500), C.Position - UDim2.new(0, 250, 0, 250), 'Out', 'Quart', 2.5)
+		for i = 0, 1, 0.03 do
+			C.ImageTransparency = i
+			game:GetService('RunService').RenderStepped:wait()
+		end
+		C:destroy()
+	end
+	while wait() do
+		for a,v in pairs(game.Players:GetChildren()) do
+			if v.Character ~= nil and v.Character:FindFirstChild("Head") then
+				for b,x in pairs(v.Character.Head:GetChildren()) do
+					if x:IsA("Sound") then
+						x.Playing = true
+					end
+				end
+			end
+		end
+	end
+	while wait() do
+		for a,v in pairs(game.Players:GetChildren()) do
+			if v.Character ~= nil and v.Character:FindFirstChild("Head") then
+				for b,x in pairs(v.Character.Head:GetChildren()) do
+					if x:IsA("Sound") then
+						x.Playing = true
+					end
+				end
+			end
+		end
+	end
+end)
+
+goto.MouseButton1Down:connect(function(X, Y)
+	if not goto:FindFirstChild('Circle') then
+		local C = Instance.new('ImageLabel', goto)
+		C.BackgroundTransparency = 1
+		C.Position = UDim2.new(0, X - 0, 0, Y - 35) - UDim2.new(0, goto.AbsolutePosition.X, 0, goto.AbsolutePosition.Y)
+		C.Size = UDim2.new(0, 0, 0, 0)
+		C.ZIndex = goto.ZIndex
+		C.Image = 'rbxassetid://200182847'
+		C.ImageColor3 = Color3.new(0.0980392, 0.0980392, 0.0980392)
+		C.Name = 'Circle'
+		C:TweenSizeAndPosition(UDim2.new(0, 500, 0, 500), C.Position - UDim2.new(0, 250, 0, 250), 'Out', 'Quart', 2.5)
+		for i = 0, 1, 0.03 do
+			C.ImageTransparency = i
+			game:GetService('RunService').RenderStepped:wait()
+		end
+		C:destroy()
+	end
+	for a,v in pairs(GetPlayers(username.Text)) do
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Character.HumanoidRootPart.CFrame
+	end
+end)
+end)
+
+local Flying = true
+
+Fly.Name = "Fly"
+Fly.Parent = Base
+Fly.BackgroundColor3 = Color3.new(0.0588235, 0.513726, 0.164706)
+Fly.BorderSizePixel = 0
+Fly.Position = UDim2.new(0.362419903, 0, 0.724166334, 0)
+Fly.Size = UDim2.new(0, 144, 0, 50)
+Fly.Font = Enum.Font.Highway
+Fly.Text = "Fly"
+Fly.TextColor3 = Color3.new(0, 0, 0)
+Fly.TextSize = 25
+Fly.MouseButton1Down:connect(function()
+repeat wait()
+   until game.Players.LocalPlayer and game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:findFirstChild("Torso") and game.Players.LocalPlayer.Character:findFirstChild("Humanoid")
+local mouse = game.Players.LocalPlayer:GetMouse()
+repeat wait() until mouse
+local plr = game.Players.LocalPlayer
+local torso = plr.Character.Torso
+local flying = true
+local deb = true
+local ctrl = {f = 0, b = 0, l = 0, r = 0}
+local lastctrl = {f = 0, b = 0, l = 0, r = 0}
+local maxspeed = 50
+local speed = 0
+
+function Fly()
+local bg = Instance.new("BodyGyro", torso)
+bg.P = 9e4
+bg.maxTorque = Vector3.new(9e9, 9e9, 9e9)
+bg.cframe = torso.CFrame
+local bv = Instance.new("BodyVelocity", torso)
+bv.velocity = Vector3.new(0,0.1,0)
+bv.maxForce = Vector3.new(9e9, 9e9, 9e9)
+repeat wait()
+plr.Character.Humanoid.PlatformStand = true
+if ctrl.l + ctrl.r ~= 0 or ctrl.f + ctrl.b ~= 0 then
+speed = speed+.5+(speed/maxspeed)
+if speed > maxspeed then
+speed = maxspeed
+end
+elseif not (ctrl.l + ctrl.r ~= 0 or ctrl.f + ctrl.b ~= 0) and speed ~= 0 then
+speed = speed-1
+if speed < 0 then
+speed = 0
+end
+end
+if (ctrl.l + ctrl.r) ~= 0 or (ctrl.f + ctrl.b) ~= 0 then
+bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.lookVector * (ctrl.f+ctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(ctrl.l+ctrl.r,(ctrl.f+ctrl.b)*.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed
+lastctrl = {f = ctrl.f, b = ctrl.b, l = ctrl.l, r = ctrl.r}
+elseif (ctrl.l + ctrl.r) == 0 and (ctrl.f + ctrl.b) == 0 and speed ~= 0 then
+bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.lookVector * (lastctrl.f+lastctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(lastctrl.l+lastctrl.r,(lastctrl.f+lastctrl.b)*.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed
+else
+bv.velocity = Vector3.new(0,0.1,0)
+end
+bg.cframe = game.Workspace.CurrentCamera.CoordinateFrame * CFrame.Angles(-math.rad((ctrl.f+ctrl.b)*50*speed/maxspeed),0,0)
+until not flying
+ctrl = {f = 0, b = 0, l = 0, r = 0}
+lastctrl = {f = 0, b = 0, l = 0, r = 0}
+speed = 0
+bg:Destroy()
+bv:Destroy()
+plr.Character.Humanoid.PlatformStand = false
+end
+mouse.KeyDown:connect(function(key)
+if key:lower() == "e" then
+if flying then flying = false
+else
+flying = true
+Fly()
+end
+elseif key:lower() == "w" then
+ctrl.f = 1
+elseif key:lower() == "s" then
+ctrl.b = -1
+elseif key:lower() == "a" then
+ctrl.l = -1
+elseif key:lower() == "d" then
+ctrl.r = 1
+end
+end)
+mouse.KeyUp:connect(function(key)
+if key:lower() == "w" then
+ctrl.f = 0
+elseif key:lower() == "s" then
+ctrl.b = 0
+elseif key:lower() == "a" then
+ctrl.l = 0
+elseif key:lower() == "d" then
+ctrl.r = 0
+end
+end)
+Fly()
+end)
+
+
+local noclip = false
+
+Noclip.Name = "Noclip"
+Noclip.Parent = Base
+Noclip.BackgroundColor3 = Color3.new(0.0588235, 0.513726, 0.164706)
+Noclip.BorderSizePixel = 0
+Noclip.Position = UDim2.new(0.69104898, 0, 0.724166334, 0)
+Noclip.Size = UDim2.new(0, 144, 0, 50)
+Noclip.Font = Enum.Font.Highway
+Noclip.Text = "Noclip"
+Noclip.TextColor3 = Color3.new(0, 0, 0)
+Noclip.TextSize = 25
+Noclip.MouseButton1Down:connect(function()
+if Noclip == false then
+	game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+	NoClip.Text = "Clip"
+else
+	game.Players.LocalPlayer.Character.Humanoid:ChangeState(9)
+	Noclip = true
+end
+end)
+
+
+GUILine.Name = "GUI Line"
+GUILine.Parent = Base
+GUILine.BackgroundColor3 = Color3.new(0.0823529, 0.639216, 0.219608)
+GUILine.BorderSizePixel = 0
+GUILine.Position = UDim2.new(-0.000363619998, 0, -0.00101011992, 0)
+GUILine.Selectable = true
+GUILine.Size = UDim2.new(0, 496, 0, 12)
+
+no.Name = "no"
+no.Parent = GUILine
+no.BackgroundColor3 = Color3.new(0.0901961, 0.780392, 0.239216)
+no.BorderSizePixel = 0
+no.Position = UDim2.new(0, 0, 1, 0)
+no.Size = UDim2.new(0, 496, 0, 67)
+
+FE.Name = "FE"
+FE.Parent = GUILine
+FE.BackgroundColor3 = Color3.new(1, 1, 1)
+FE.BackgroundTransparency = 1
+FE.Position = UDim2.new(0.258244455, 0, 0.00167793036, 0)
+FE.Size = UDim2.new(0, 240, 0, 86)
+FE.Font = Enum.Font.Highway
+FE.Text = "FE Hax 1337"
+FE.TextSize = 35
+
+GUILine_2.Name = "GUI Line"
+GUILine_2.Parent = Base
+GUILine_2.BackgroundColor3 = Color3.new(0.0823529, 0.639216, 0.219608)
+GUILine_2.BorderSizePixel = 0
+GUILine_2.Position = UDim2.new(-0.000363620929, 0, 0.960183144, 0)
+GUILine_2.Size = UDim2.new(0, 496, 0, 18)
+
+no_2.Name = "no"
+no_2.Parent = GUILine_2
+no_2.BackgroundColor3 = Color3.new(0.0901961, 0.780392, 0.239216)
+no_2.BorderSizePixel = 0
+no_2.Position = UDim2.new(0, 0, -1.43478262, 0)
+no_2.Size = UDim2.new(0, 496, 0, 33)
+
+Creditz.Name = "Creditz"
+Creditz.Parent = GUILine_2
+Creditz.BackgroundColor3 = Color3.new(1, 1, 1)
+Creditz.BackgroundTransparency = 1
+Creditz.BorderSizePixel = 0
+Creditz.Position = UDim2.new(0.00806450844, 0, -1.91666675, 0)
+Creditz.Size = UDim2.new(0, 488, 0, 50)
+Creditz.Font = Enum.Font.Highway
+Creditz.Text = "Credits : Stick_Smart, iVerzide and Cookie1890 for the scripts."
+Creditz.TextSize = 20

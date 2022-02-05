@@ -1,0 +1,417 @@
+-- Made by JackMcJagger15
+
+local RandomGUI = Instance.new("ScreenGui")
+local Main = Instance.new("Frame")
+local TopBar = Instance.new("Frame")
+local ShadowBar = Instance.new("Frame")
+local ButtonPlace = Instance.new("Frame")
+local WeridAttract = Instance.new("TextButton")
+local HumanMine = Instance.new("TextButton")
+local UFO = Instance.new("TextButton")
+local Exit = Instance.new("TextButton")
+local Credit = Instance.new("TextLabel")
+local Target = Instance.new("TextBox")
+local Directions = Instance.new("TextLabel")
+
+-- Properties
+
+RandomGUI.Name = "RandomGUI"
+RandomGUI.Parent = game.CoreGui
+
+Main.Name = "Main"
+Main.Parent = RandomGUI
+Main.BackgroundColor3 = Color3.new(0.211765, 0.211765, 0.211765)
+Main.BorderSizePixel = 0
+Main.Position = UDim2.new(0.377737224, 0, 0.365612656, 0)
+Main.Size = UDim2.new(0, 338, 0, 209)
+Main.Active = true
+Main.Selectable = true
+Main.Draggable = true
+
+TopBar.Name = "TopBar"
+TopBar.Parent = Main
+TopBar.BackgroundColor3 = Color3.new(0.137255, 0.137255, 0.137255)
+TopBar.BorderSizePixel = 0
+TopBar.Size = UDim2.new(0, 338, 0, 25)
+
+ShadowBar.Name = "ShadowBar"
+ShadowBar.Parent = Main
+ShadowBar.BackgroundColor3 = Color3.new(0.0862745, 0.0862745, 0.0862745)
+ShadowBar.BorderSizePixel = 0
+ShadowBar.Position = UDim2.new(0, 0, 0.119617224, 0)
+ShadowBar.Size = UDim2.new(0, 338, 0, 12)
+
+ButtonPlace.Name = "ButtonPlace"
+ButtonPlace.Parent = Main
+ButtonPlace.BackgroundColor3 = Color3.new(0.266667, 0.266667, 0.266667)
+ButtonPlace.BorderSizePixel = 0
+ButtonPlace.Position = UDim2.new(0.0632226616, 0, 0.228048906, 0)
+ButtonPlace.Size = UDim2.new(0, 154, 0, 144)
+
+WeridAttract.Name = "WeridAttract"
+WeridAttract.Parent = ButtonPlace
+WeridAttract.BackgroundColor3 = Color3.new(0.129412, 0.129412, 0.129412)
+WeridAttract.BorderSizePixel = 0
+WeridAttract.Position = UDim2.new(0.149350643, 0, 0.0972222239, 0)
+WeridAttract.Size = UDim2.new(0, 107, 0, 31)
+WeridAttract.Font = Enum.Font.Cartoon
+WeridAttract.Text = "Weird Attract"
+WeridAttract.TextColor3 = Color3.new(1, 1, 1)
+WeridAttract.TextSize = 14
+
+HumanMine.Name = "HumanMine"
+HumanMine.Parent = ButtonPlace
+HumanMine.BackgroundColor3 = Color3.new(0.129412, 0.129412, 0.129412)
+HumanMine.BorderSizePixel = 0
+HumanMine.Position = UDim2.new(0.149350643, 0, 0.395833343, 0)
+HumanMine.Size = UDim2.new(0, 107, 0, 31)
+HumanMine.Font = Enum.Font.Cartoon
+HumanMine.Text = "Human Mine"
+HumanMine.TextColor3 = Color3.new(1, 1, 1)
+HumanMine.TextSize = 14
+
+UFO.Name = "UFO"
+UFO.Parent = ButtonPlace
+UFO.BackgroundColor3 = Color3.new(0.129412, 0.129412, 0.129412)
+UFO.BorderSizePixel = 0
+UFO.Position = UDim2.new(0.149350643, 0, 0.701388836, 0)
+UFO.Size = UDim2.new(0, 107, 0, 31)
+UFO.Font = Enum.Font.Cartoon
+UFO.Text = "UFO Of Death"
+UFO.TextColor3 = Color3.new(1, 1, 1)
+UFO.TextSize = 14
+
+Exit.Name = "Exit"
+Exit.Parent = Main
+Exit.BackgroundColor3 = Color3.new(1, 1, 1)
+Exit.BackgroundTransparency = 1
+Exit.Position = UDim2.new(0.913743496, 0, 0, 0)
+Exit.Size = UDim2.new(0, 29, 0, 26)
+Exit.Font = Enum.Font.Cartoon
+Exit.Text = "X"
+Exit.TextColor3 = Color3.new(1, 1, 1)
+Exit.TextSize = 14
+
+Credit.Name = "Credit"
+Credit.Parent = Main
+Credit.BackgroundColor3 = Color3.new(1, 1, 1)
+Credit.BackgroundTransparency = 1
+Credit.Position = UDim2.new(0, 0, 0.0143540669, 0)
+Credit.Size = UDim2.new(0, 200, 0, 22)
+Credit.Font = Enum.Font.Cartoon
+Credit.Text = "Cool FE GUI By JackMcJagger15"
+Credit.TextColor3 = Color3.new(1, 1, 1)
+Credit.TextSize = 14
+
+Target.Name = "Target"
+Target.Parent = Main
+Target.BackgroundColor3 = Color3.new(0.129412, 0.129412, 0.129412)
+Target.BorderSizePixel = 0
+Target.Position = UDim2.new(0.557692289, 0, 0.746411443, 0)
+Target.Size = UDim2.new(0, 136, 0, 30)
+Target.Font = Enum.Font.Cartoon
+Target.Text = "Target"
+Target.TextColor3 = Color3.new(1, 1, 1)
+Target.TextSize = 14
+
+Directions.Name = "Directions"
+Directions.Parent = Main
+Directions.BackgroundColor3 = Color3.new(1, 1, 1)
+Directions.BackgroundTransparency = 1
+Directions.BorderSizePixel = 0
+Directions.Position = UDim2.new(0.57100594, 0, 0.229665071, 0)
+Directions.Size = UDim2.new(0, 132, 0, 101)
+Directions.Font = Enum.Font.Cartoon
+Directions.Text = "To use weird attract type a name into the TARGET Box and press the button. To use Human Mine just press the button and wait for someone to touch you."
+Directions.TextColor3 = Color3.new(1, 1, 1)
+Directions.TextScaled = true
+Directions.TextSize = 14
+Directions.TextWrapped = true
+Directions.TextXAlignment = Enum.TextXAlignment.Left
+Directions.TextYAlignment = Enum.TextYAlignment.Top
+
+function GetPlayer(String)
+local Found = {}
+local strl = String:lower()
+if strl == "all" then
+for i,v in pairs(game.Players:GetPlayers()) do
+table.insert(Found,v)
+end
+elseif strl == "others" then
+for i,v in pairs(game.Players:GetPlayers()) do
+if v.Name ~= game.Players.LocalPlayer.Name then
+table.insert(Found,v)
+end
+end
+else
+for i,v in pairs(game.Players:GetPlayers()) do
+if v.Name:lower():sub(1, #String) == String:lower() then
+table.insert(Found,v)
+end
+end
+end
+return Found
+end
+
+Exit.MouseButton1Click:connect(function()
+RandomGUI:Destroy()
+end)
+
+local sigh = true
+WeridAttract.MouseButton1Click:connect(function()
+if sigh == true then
+sigh = false
+WeridAttract.Text = "Respawn"
+WeridAttract.BackgroundColor3 = Color3.fromRGB(140, 0, 0)
+for i,v in pairs(GetPlayer(Target.Text))do
+local player=game.Players.LocalPlayer.Character
+player.Humanoid:Remove()
+Instance.new('Humanoid',player)
+wait(.5)
+player:BreakJoints()
+
+local b1 = Instance.new("RocketPropulsion")
+b1.Parent = game.Players.LocalPlayer.Character["Left Arm"]
+b1.Target = game.Players[v.Name].Character.Head
+b1.TurnP = 10
+b1.MaxThrust = 500
+b1.MaxSpeed = 10
+b1.ThrustP = 2500
+b1.CartoonFactor = 5
+b1:Fire()
+
+local b2 = Instance.new("RocketPropulsion")
+b2.Parent = game.Players.LocalPlayer.Character["Right Arm"]
+b2.Target = game.Players[v.Name].Character.Head
+b2.TurnP = 10
+b2.MaxThrust = 500
+b2.MaxSpeed = 10
+b2.ThrustP = 2500
+b2.CartoonFactor = 5
+b2:Fire()
+
+local b3 = Instance.new("RocketPropulsion")
+b3.Parent = game.Players.LocalPlayer.Character["Right Leg"]
+b3.Target = game.Players[v.Name].Character.Head
+b3.TurnP = 10
+b3.MaxThrust = 500
+b3.MaxSpeed = 10
+b3.ThrustP = 2500
+b3.CartoonFactor = 5
+b3:Fire()
+
+local b4 = Instance.new("RocketPropulsion")
+b4.Parent = game.Players.LocalPlayer.Character["Left Leg"]
+b4.Target = game.Players[v.Name].Character.Head
+b4.TurnP = 10
+b4.MaxThrust = 500
+b4.MaxSpeed = 10
+b4.ThrustP = 2500
+b4.CartoonFactor = 5
+b4:Fire()
+
+local b5 = Instance.new("RocketPropulsion")
+b5.Parent = game.Players.LocalPlayer.Character["Head"]
+b5.Target = game.Players[v.Name].Character.Head
+b5.TurnP = 10
+b5.MaxThrust = 500
+b5.MaxSpeed = 10
+b5.ThrustP = 2500
+b5.CartoonFactor = 5
+b5:Fire()
+
+local b6 = Instance.new("RocketPropulsion")
+b6.Parent = game.Players.LocalPlayer.Character["Torso"]
+b6.Target = game.Players[v.Name].Character.Head
+b6.TurnP = 10
+b6.MaxThrust = 500
+b6.MaxSpeed = 10
+b6.ThrustP = 2500
+b6.CartoonFactor = 5
+b6:Fire()
+end
+else
+sigh = true
+WeridAttract.Text = "Weird Attract"
+WeridAttract.BackgroundColor3 = Color3.fromRGB(33, 33, 33)
+local LP = game.Players.LocalPlayer
+local mod = Instance.new('Model', workspace) mod.Name = 'new '..LP.Name
+local hum = Instance.new('Humanoid', mod)
+local ins = Instance.new('Part', mod) ins.Name = 'Torso' ins.CanCollide = false ins.Transparency = 1
+LP.Character = mod
+end
+end)
+
+local fa = false
+local cam = workspace.CurrentCamera
+local cam1 = 0
+local cam2 = 0
+local cam3 = 0
+local k1 = false
+local k2 = false
+local k3 = false
+local k4 = false
+local k5 = false
+local k6 = false
+cs = 2
+function movecam()
+local fc = game:GetService('Players').LocalPlayer.Character:FindFirstChild('xFC')
+if fa == false then
+repeat
+if game:GetService('Players').LocalPlayer.Character:FindFirstChild('xFC') then
+local fp = fc.Position
+fc.CFrame = CFrame.new(Vector3.new(fp.X,fp.Y+cam3,fp.Z),cam.CFrame.p)*CFrame.new(cam2,0,cam1)
+fa = true
+end
+game:GetService('RunService').RenderStepped:Wait()
+until not game:GetService('Players').LocalPlayer.Character:FindFirstChild('xFC')
+fa = false
+end
+end
+function kp1(inputObject, gameProcessedEvent)
+if not gameProcessedEvent and game:GetService('Players').LocalPlayer.Character and game:GetService('Players').LocalPlayer.Character:FindFirstChild('xFC') then
+if inputObject.KeyCode == Enum.KeyCode.W or inputObject.KeyCode == Enum.KeyCode.Up then
+k1 = true
+cam1 = cs end
+if inputObject.KeyCode == Enum.KeyCode.S or inputObject.KeyCode == Enum.KeyCode.Down then
+k2 = true
+cam1 = (cs*-1) end
+if inputObject.KeyCode == Enum.KeyCode.A or inputObject.KeyCode == Enum.KeyCode.Left then
+k3 = true
+cam2 = cs end
+if inputObject.KeyCode == Enum.KeyCode.D or inputObject.KeyCode == Enum.KeyCode.Right then
+k4 = true
+cam2 = (cs*-1) end
+if inputObject.KeyCode == Enum.KeyCode.E or inputObject.KeyCode == Enum.KeyCode.Space then
+k5 = true
+cam3 = cs end
+if inputObject.KeyCode == Enum.KeyCode.Q or inputObject.KeyCode == Enum.KeyCode.LeftControl then
+k6 = true
+cam3 = (cs*-1) end
+end
+end
+game:GetService("UserInputService").InputBegan:connect(kp1)
+function kp2(inputObject, gameProcessedEvent)
+if not gameProcessedEvent and game:GetService('Players').LocalPlayer.Character and game:GetService('Players').LocalPlayer.Character:FindFirstChild('xFC') then
+if inputObject.KeyCode == Enum.KeyCode.W or inputObject.KeyCode == Enum.KeyCode.Up then
+k1 = false
+if k2 == false then
+cam1 = 0
+end
+end
+if inputObject.KeyCode == Enum.KeyCode.S or inputObject.KeyCode == Enum.KeyCode.Down then
+k2 = false
+if k1 == false then
+cam1 = 0
+end
+end
+if inputObject.KeyCode == Enum.KeyCode.A or inputObject.KeyCode == Enum.KeyCode.Left then
+k3= false
+if k4== false then
+cam2 = 0
+end
+end
+if inputObject.KeyCode == Enum.KeyCode.D or inputObject.KeyCode == Enum.KeyCode.Right then
+k4 = false
+if k3 == false then
+cam2 = 0
+end
+end
+if inputObject.KeyCode == Enum.KeyCode.E or inputObject.KeyCode == Enum.KeyCode.Space then
+k5 = false
+if k6 == false then
+cam3 = 0
+end
+end
+if inputObject.KeyCode == Enum.KeyCode.Q or inputObject.KeyCode == Enum.KeyCode.LeftControl then
+k6 = false
+if k5 == false then
+cam3 = 0
+end
+end
+end
+end
+game:GetService("UserInputService").InputEnded:connect(kp2)
+function FC()
+if not game:GetService('Players').LocalPlayer.Character:FindFirstChild('xFC') then
+game:GetService('Players').LocalPlayer.PlayerScripts.ControlScript.Disabled = true
+local fc = Instance.new('Part',game:GetService('Players').LocalPlayer.Character)
+fc.CanCollide = false
+fc.Anchored = true
+fc.Transparency = 1
+fc.Size = Vector3.new(1,1,1)
+fc.Name = 'xFC'
+fc.CFrame = game:GetService('Players').LocalPlayer.Character.Head.CFrame
+local cam = workspace.CurrentCamera
+cam.CameraSubject = fc
+cam.CameraType = 'Custom'
+movecam()
+end end
+function UFC()
+game:GetService('Players').LocalPlayer.PlayerScripts.ControlScript.Disabled = false
+if game:GetService('Players').LocalPlayer.Character:FindFirstChild('xFC') then
+game:GetService('Players').LocalPlayer.Character:FindFirstChild('xFC'):Destroy()
+local cam = workspace.CurrentCamera
+cam.CameraSubject = game:GetService('Players').LocalPlayer.Character.Humanoid
+cam.CameraType = 'Custom'
+end end
+
+local toggle = false
+local active = true
+UFO.MouseButton1Click:connect(function()
+if active == true then
+active = false
+UFO.Text = "Stop"
+UFO.BackgroundColor3 = Color3.fromRGB(140, 0, 0)
+game:GetService('RunService').Stepped:connect(function()
+if game.Players.LocalPlayer.Character.Humanoid.RigType == Enum.HumanoidRigType.R6 then
+game.Players.LocalPlayer.Character.Head.CanCollide = false
+game.Players.LocalPlayer.Character.Torso.CanCollide = false
+game.Players.LocalPlayer.Character["Left Leg"].CanCollide = false
+game.Players.LocalPlayer.Character["Right Leg"].CanCollide = false
+else
+if game.Players.LocalPlayer.Character.Humanoid.RigType == Enum.HumanoidRigType.R15 then
+game.Players.LocalPlayer.Character.Head.CanCollide = false
+game.Players.LocalPlayer.Character.UpperTorso.CanCollide = false
+game.Players.LocalPlayer.Character.LowerTorso.CanCollide = false
+game.Players.LocalPlayer.Character.HumanoidRootPart.CanCollide = false
+end
+end
+end)
+local a1 = Instance.new("BodyThrust")
+a1.Parent = game.Players.LocalPlayer.Character.HumanoidRootPart
+a1.Force = Vector3.new(1500,0,1500)
+a1.Location = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+local a2 = Instance.new("BodyPosition")
+a2.Parent = game.Players.LocalPlayer.Character.HumanoidRootPart
+a2.P = 100000
+a2.MaxForce = Vector3.new(1021231,123210,1123120)
+-- loop
+toggle = false
+spawn(function()
+while toggle == false do
+a2.Position = game.Workspace.Camera.CameraSubject.Position
+wait()
+end
+end)
+FC()
+else
+active = true
+UFO.Text = "UFO Of Death"
+UFO.BackgroundColor3 = Color3.fromRGB(33, 33, 33)
+game.Players.LocalPlayer.Character.HumanoidRootPart.BodyThrust:Destroy()
+wait(1)
+game.Players.LocalPlayer.Character.HumanoidRootPart.BodyPosition:Destroy()
+UFC()
+toggle = true
+end
+end)
+
+HumanMine.MouseButton1Click:connect(function()
+local a1 = Instance.new("BodyThrust")
+a1.Parent = game.Players.LocalPlayer.Character.HumanoidRootPart
+a1.Force = Vector3.new(8000,0,8000)
+a1.Location = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+wait(.1)
+game.Players.LocalPlayer.Character.Torso.Anchored = true
+end) 
